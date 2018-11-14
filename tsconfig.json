@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "target": "es2015",
+      "experimentalDecorators": true,
+      "outDir": "dist",
+      "strict": true,
+      "noUnusedLocals": true,
+      "sourceMap": true,
+  }
+}
