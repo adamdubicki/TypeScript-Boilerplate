@@ -1,14 +1,25 @@
-import * as express from 'express';
+import * as bodyParser from 'body-parser';
 
-const app = express();
-app.use(require('express-status-monitor')());
+import 'reflect-metadata';
+import { Container } from 'inversify';
+import { InversifyExpressServer } from 'inversify-express-utils';
 
-/**
- * Start Express server.
- */
-const server = app.listen(4000, () => {
-  console.log('App is running at http://localhost:4000 in dev mode');
-  console.log('Press CTRL-C to stop\n');
+// declare metadata by @controller annotation
+import './api/controllers';
+
+// set up container
+const container = new Container();
+
+// create server
+const server = new InversifyExpressServer(container);
+server.setConfig((app) => {
+  // add body parser
+  app.use(bodyParser.urlencoded({
+    extended: true,
+  }));
+  app.use(bodyParser.json());
+  app.use(require('express-status-monitor')());
 });
 
-export = server;
+const app = server.build();
+app.listen(3000);

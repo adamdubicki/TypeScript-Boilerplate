@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
       "module": "commonjs",
-      "target": "es2015",
-      "experimentalDecorators": true,
-      "outDir": "dist",
+      "lib": ["es6", "dom"],
+      "target": "es5",
+      "experimentalDecorators": true, // Necessary for @decorators
+      "outDir": "dist",               // Output folder for the compiled ts
       "strict": true,
-      "noUnusedLocals": true,
+      "noUnusedLocals": false,
       "sourceMap": true,
+      "moduleResolution": "node",
+      "types": ["reflect-metadata"],  // Necessary for inversify
+      "emitDecoratorMetadata": true,
+      "baseUrl": "src"              // Base Path for absolute imports
   }
 }
