@@ -1,1 +1,0 @@
-export { ExampleRequest } from './exampleRequest';

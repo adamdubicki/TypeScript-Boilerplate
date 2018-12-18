@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-      "module": "commonjs",
-      "lib": ["es6", "dom"],
-      "target": "es6",
-      "experimentalDecorators": true, // Necessary for @decorators
-      "outDir": "dist",               // Output folder for the compiled ts
-      "strict": true,
-      "noUnusedLocals": false,
-      "sourceMap": true,
-      "moduleResolution": "node",
-      "types": ["reflect-metadata"],  // Necessary for inversify
-      "emitDecoratorMetadata": true,
-      "baseUrl": "src"              // Base Path for absolute imports
-  }
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./"
+  },
+  "exclude": ["node_modules"]
 }
