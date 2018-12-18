@@ -2,7 +2,7 @@
   "compilerOptions": {
       "module": "commonjs",
       "lib": ["es6", "dom"],
-      "target": "es5",
+      "target": "es6",
       "experimentalDecorators": true, // Necessary for @decorators
       "outDir": "dist",               // Output folder for the compiled ts
       "strict": true,
