@@ -1,7 +1,7 @@
 {
-  "name": "project",
+  "name": "typescript-boilerplate",
   "version": "0.0.0",
-  "description": "A Simple Nest JS Application Boilerplate",
+  "description": "A simple NestJS boilerplate",
   "author": "Adam Dubicki",
   "license": "MIT",
   "scripts": {
@@ -22,10 +22,14 @@
   "dependencies": {
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
-    "dotenv": "^6.2.0",
+    "@nestjs/swagger": "^2.5.1",
+    "class-transformer": "^0.2.0",
+    "class-validator": "^0.9.1",
+    "postgresql": "0.0.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",
+    "typeorm": "^0.2.9",
     "typescript": "^3.0.1"
   },
   "devDependencies": {
