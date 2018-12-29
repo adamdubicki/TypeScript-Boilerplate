@@ -18,12 +18,12 @@ export class TodosController {
 
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
-  create(@Body() createTodoDto: CreateTodoDto) {
-    this.todoService.create(createTodoDto);
+  async create(@Body() createTodoDto: CreateTodoDto): Promise<Todo> {
+    return await this.todoService.create(createTodoDto);
   }
 
   @Get()
   async findAll(): Promise<Todo[]> {
-    return this.todoService.findAll();
+    return await this.todoService.findAll();
   }
 }

@@ -1,4 +1,4 @@
-import { AllExceptionFilter } from './filter/all-exception.filter';
+import { AllExceptionFilter } from './shared/filter/all-exception.filter';
 import { NestFactory, HTTP_SERVER_REF } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
